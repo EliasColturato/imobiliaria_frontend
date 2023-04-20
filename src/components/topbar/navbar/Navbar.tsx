@@ -12,8 +12,8 @@ export default function Navbar() {
         <h1>Logo</h1>
       </Logo>
       <ActionNavBar>
-        <button>Início</button>
-        <button>Comprar imóvel</button>
+        <button id="home">Início</button>
+        <button id="buy">Comprar imóvel</button>
       </ActionNavBar>
       <SuportNavBar>
         <button>Fale Conosco</button>
