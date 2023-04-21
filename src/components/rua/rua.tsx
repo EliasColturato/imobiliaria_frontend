@@ -18,7 +18,9 @@ export default function HandleRua({ rua_id }: { rua_id: number }) {
 
   return (
     <>
-      <p>{rua ? rua.nome : 'Rua não encontrada'}</p>
+      <h1 style={{ fontSize: '2t0px' }}>
+        {rua ? rua.nome : 'Rua não encontrada'}
+      </h1>
     </>
   );
 }

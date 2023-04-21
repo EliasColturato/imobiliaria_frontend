@@ -2,16 +2,9 @@ import { useState, useEffect } from 'react';
 
 import Topbar from '../../components/topbar';
 
-import {
-  WrapperShelf,
-  HouseShelf,
-  Title,
-  HouseCard,
-  WrapperHouse,
-} from './style.Home';
+import { WrapperShelf, HouseShelf, Title, HouseCard } from './style.Home';
 
-import HandleRua from '../../components/rua';
-import HandleBairro from '../../components/bairro';
+import Casa from '../../components/casa/Casa';
 
 interface HouseProps {
   id: number;
@@ -21,6 +14,7 @@ interface HouseProps {
   bairro_id: number;
   rua_id: number;
   valor: number;
+  garagem: number;
 }
 
 export default function Home() {
@@ -46,14 +40,15 @@ export default function Home() {
           <HouseCard>
             {casas.map(item => {
               return (
-                <WrapperHouse key={item.id}>
-                  <img src="./img/house_image.png" alt="" />
-                  <h1>Área construída</h1>
-                  <p>{item.area_construcao}m²</p>
-                  <HandleRua rua_id={item.rua_id} />
-                  <HandleBairro bairro_id={item.bairro_id} />
-                  <h1>{item.valor}</h1>
-                </WrapperHouse>
+                <>
+                  <Casa
+                    garagem={item.garagem}
+                    area_construcao={item.area_construcao}
+                    rua_id={item.rua_id}
+                    bairro_id={item.bairro_id}
+                    valor={item.valor}
+                  />
+                </>
               );
             })}
           </HouseCard>

@@ -27,15 +27,3 @@ export const HouseCard = styled.div`
   column-gap: 1rem;
   row-gap: 1rem;
 `;
-
-export const WrapperHouse = styled.div`
-  border-radius: 10px;
-  width: 377px;
-  height: 443px;
-  border: 1px solid ${color.primaryColor};
-  background-color: ${color.secundaryColor};
-  img {
-    border-radius: 10px 10px 0 0;
-    width: 100%;
-  }
-`;

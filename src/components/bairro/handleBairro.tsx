@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { color } from '../../utils/colors';
 
 interface BairroProps {
   id: number;
@@ -18,7 +19,9 @@ export default function HandleBairro({ bairro_id }: { bairro_id: number }) {
 
   return (
     <>
-      <p>{bairro ? bairro.nome : 'Bairro não encontrado'}</p>
+      <p style={{ fontSize: '15px', color: `${color.gray75}` }}>
+        {bairro ? bairro.nome : 'Bairro não encontrado'}
+      </p>
     </>
   );
 }
