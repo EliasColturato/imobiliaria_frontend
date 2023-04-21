@@ -27,7 +27,7 @@ export default function Topbar() {
     fetch(`http://localhost:8000/api/cidades`)
       .then(response => response.json())
       .then(data => setCidades(data));
-  }, []);
+  }, [cidades]);
 
   return (
     <WrapperTopBar>
@@ -58,7 +58,6 @@ export default function Topbar() {
                   {cidades.map(item => {
                     return (
                       <option key={item.id} value={item.id}>
-                        <p>{item.id} - </p>
                         {item.nome}
                       </option>
                     );
