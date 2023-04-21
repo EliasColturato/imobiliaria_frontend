@@ -45,7 +45,13 @@ export default function Casa(props: CasaProps) {
               currency: 'BRL',
             })}
           </h1>
-          <img src="./img/whatsapp.png" alt="WhatsApp" />
+          <a
+            href="https://api.whatsapp.com/send?phone=5516991334228&text=Olá,%20Elias.%20Quero%20mais%20informações"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src="./img/whatsapp.png" alt="WhatsApp" />
+          </a>
         </ValueCasa>
       </CasaInfo>
     </CasasCard>
