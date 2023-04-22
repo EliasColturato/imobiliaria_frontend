@@ -1,12 +1,22 @@
+import { useState } from 'react';
+
 import {
   WrapperNavbar,
   Logo,
   ActionNavBar,
   SuportNavBar,
   ResponsiveMenu,
+  ResponsiveMenuIcons,
+  WrapperResponsiveMenuIcons,
 } from './style.Navbar';
 
 export default function Navbar() {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
     <WrapperNavbar>
       <Logo>
@@ -20,9 +30,18 @@ export default function Navbar() {
         <button>Fale Conosco</button>
         <img src="./img/headphones.png" alt="" />
       </SuportNavBar>
-      <ResponsiveMenu>
+      <ResponsiveMenu onClick={toggleMenu}>
         <img src="./img/menu.png" alt="" />
       </ResponsiveMenu>
+      {showMenu && (
+        <WrapperResponsiveMenuIcons>
+          <ResponsiveMenuIcons className={showMenu ? 'show' : 'hide'}>
+            <button onClick={toggleMenu}>Início</button>
+            <button onClick={toggleMenu}>Home</button>
+            <button onClick={toggleMenu}>Fale conosco</button>
+          </ResponsiveMenuIcons>
+        </WrapperResponsiveMenuIcons>
+      )}
     </WrapperNavbar>
   );
 }

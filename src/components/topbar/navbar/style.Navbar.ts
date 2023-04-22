@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { color } from '../../../utils/colors';
 
 export const WrapperNavbar = styled.div`
@@ -61,5 +61,63 @@ export const ResponsiveMenu = styled.div`
   }
   @media (max-width: 1000px) {
     display: block;
+  }
+`;
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
+
+const fadeOut = keyframes`
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+`;
+
+export const ResponsiveMenuIcons = styled.div`
+  &.show {
+    animation: ${fadeIn} 0.3s ease-in-out;
+  }
+  &.hide {
+    display: none;
+    animation: ${fadeOut} 0.3s all;
+  }
+  width: 100%;
+  height: 100vh;
+  background-color: ${color.secundaryColor};
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+  justify-content: center;
+  transition: all 0.3s;
+`;
+
+export const WrapperResponsiveMenuIcons = styled.div`
+  button {
+    font-size: 30px;
+    border-radius: 10px;
+    width: 500px;
+    height: 80px;
+    color: ${color.white};
+    font-weight: bold;
+    background-color: ${color.primaryColor};
+    border: none;
   }
 `;
