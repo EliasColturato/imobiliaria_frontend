@@ -23,6 +23,9 @@ export const MenuAction = styled.div`
   display: flex;
   flex-direction: column;
   width: 80%;
+  @media (max-width: 800px) {
+    align-items: center;
+  }
 `;
 
 export const Title = styled.div`
@@ -38,10 +41,28 @@ export const Title = styled.div`
   p {
     font-size: 20px;
   }
+
+  @media (max-width: 800px) {
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-size: 40px;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+  }
 `;
 
 export const SearchWrapper = styled.div`
   margin: 40px 0;
+  @media (max-width: 800px) {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const OptionsMenu = styled.div`
@@ -56,6 +77,14 @@ export const OptionsMenu = styled.div`
     font-size: 25px;
     font-weight: bold;
   }
+  @media (max-width: 650px) {
+    display: flex;
+    justify-content: center;
+  }
+  @media (max-width: 500px) {
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
   #buy {
     color: ${color.white};
     background-color: ${color.primaryColor};
@@ -68,20 +97,19 @@ export const OptionsMenu = styled.div`
 `;
 
 export const SearchMenu = styled.div`
+  padding: 40px;
   margin: 40px 0;
   border-radius: 10px;
   background-color: ${color.white};
+  row-gap: 1rem;
   width: 656px;
-  height: 286px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  row-gap: 1rem;
+  justify-content: space-evenly;
   input,
   button,
   select {
-    width: 586px;
+    width: 100%;
     height: 58px;
     border-radius: 10px;
     border: 2px solid ${color.primaryColor};
@@ -89,12 +117,21 @@ export const SearchMenu = styled.div`
     font-size: 20px;
     padding: 0 20px;
   }
+
+  @media (max-width: 800px) {
+    width: 80%;
+    align-items: center;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const TextInput = styled.div``;
 
 export const SearchFilters = styled.div`
-  justify-content: space-between;
+  align-items: initial;
   select {
     color: ${color.primaryColor};
     font-weight: bold;

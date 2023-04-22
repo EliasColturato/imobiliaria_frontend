@@ -11,6 +11,12 @@ export const WrapperShelf = styled.div`
 export const HouseShelf = styled.div`
   margin: 40px 0;
   width: 80%;
+  @media (max-width: 1000px) {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const Title = styled.div`
@@ -20,10 +26,19 @@ export const Title = styled.div`
   strong {
     color: ${color.primaryColor};
   }
+  @media (max-width: 1000px) {
+    text-align: center;
+  }
 `;
 
 export const HouseCard = styled.div`
   display: flex;
   column-gap: 1rem;
   row-gap: 1rem;
+  @media (max-width: 1000px) {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
 `;

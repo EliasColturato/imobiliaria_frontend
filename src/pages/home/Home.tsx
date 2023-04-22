@@ -5,6 +5,7 @@ import Topbar from '../../components/topbar';
 import { WrapperShelf, HouseShelf, Title, HouseCard } from './style.Home';
 
 import Casa from '../../components/casa/Casa';
+import SectionBeneficios from '../../components/sectionBeneficios';
 
 interface HouseProps {
   id: number;
@@ -54,6 +55,7 @@ export default function Home() {
           </HouseCard>
         </HouseShelf>
       </WrapperShelf>
+      <SectionBeneficios />
     </>
   );
 }

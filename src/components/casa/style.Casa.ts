@@ -2,13 +2,17 @@ import styled from 'styled-components';
 import { color } from '../../utils/colors';
 
 export const CasasCard = styled.div`
+  margin: 15px 0;
   border-radius: 10px;
-  width: 377px;
+  width: 390px;
   height: 443px;
   border: 1px solid ${color.primaryColor};
   background-color: ${color.secundaryColor};
   img {
     border-radius: 10px 10px 0 0;
+    width: 100%;
+  }
+  @media (max-width: 400px) {
     width: 100%;
   }
 `;
@@ -28,6 +32,11 @@ export const DetailsCasa = styled.div`
   font-weight: 500;
   img {
     width: 30px;
+  }
+  @media (max-width: 400px) {
+    img {
+      width: 25px;
+    }
   }
 `;
 
@@ -53,5 +62,10 @@ export const ValueCasa = styled.div`
   color: ${color.primaryColor};
   img {
     width: 30px;
+  }
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 30px;
+    }
   }
 `;

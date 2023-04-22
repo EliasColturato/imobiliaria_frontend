@@ -3,6 +3,7 @@ import {
   Logo,
   ActionNavBar,
   SuportNavBar,
+  ResponsiveMenu,
 } from './style.Navbar';
 
 export default function Navbar() {
@@ -19,6 +20,9 @@ export default function Navbar() {
         <button>Fale Conosco</button>
         <img src="./img/headphones.png" alt="" />
       </SuportNavBar>
+      <ResponsiveMenu>
+        <img src="./img/menu.png" alt="" />
+      </ResponsiveMenu>
     </WrapperNavbar>
   );
 }
