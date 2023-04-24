@@ -88,6 +88,15 @@ const fadeOut = keyframes`
 `;
 
 export const ResponsiveMenuIcons = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   &.show {
     animation: ${fadeIn} 0.3s ease-in-out;
   }
@@ -95,29 +104,44 @@ export const ResponsiveMenuIcons = styled.div`
     display: none;
     animation: ${fadeOut} 0.3s all;
   }
-  width: 100%;
-  height: 100vh;
-  background-color: ${color.secundaryColor};
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 2rem;
-  justify-content: center;
-  transition: all 0.3s;
 `;
 
 export const WrapperResponsiveMenuIcons = styled.div`
-  button {
-    font-size: 30px;
-    border-radius: 10px;
-    width: 500px;
-    height: 80px;
+  background-color: rgba(20, 20, 20, 0.5);
+  backdrop-filter: blur(4px);
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 60px;
+  padding: 2rem;
+  left: 0;
+  z-index: 99;
+  flex-direction: column;
+  row-gap: 4rem;
+  overflow-y: auto;
+  display: none;
+  @media (max-width: 1000px) {
+    display: flex;
+  }
+`;
+
+export const CloseMenu = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 99;
+  background-color: ${color.primaryColor};
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  h1 {
     color: ${color.white};
+    font-size: 20px;
     font-weight: bold;
-    background-color: ${color.primaryColor};
-    border: none;
+  }
+  display: none;
+  @media (max-width: 1000px) {
+    display: flex;
   }
 `;
