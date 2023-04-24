@@ -33,6 +33,7 @@ export const Title = styled.div`
 
 export const HouseCard = styled.div`
   display: flex;
+  flex-wrap: wrap;
   column-gap: 1rem;
   row-gap: 1rem;
   @media (max-width: 1000px) {

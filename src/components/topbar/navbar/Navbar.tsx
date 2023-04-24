@@ -53,9 +53,6 @@ export default function Navbar() {
             <MenuItens text="Investir" img_url={investirImg} />
             <MenuItens text="Anunciar" img_url={anunciaImg} />
             <MenuItens text="Suporte" img_url={suporteImg} />
-            {/* <button onClick={toggleMenu}>Início</button> */}
-            {/* <button onClick={toggleMenu}>Home</button>
-            <button onClick={toggleMenu}>Fale conosco</button> */}
           </WrapperResponsiveMenuIcons>
         </ResponsiveMenuIcons>
       )}
