@@ -14,7 +14,9 @@ git clone https://github.com/EliasColturato/imobiliaria_frontend.git
 cd imobiliaria_frontend
 
 npm install
-# ou
+
+ou
+
 yarn install
 
 ## Uso 
