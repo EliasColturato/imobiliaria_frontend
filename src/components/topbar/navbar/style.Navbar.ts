@@ -89,8 +89,8 @@ const fadeOut = keyframes`
 
 export const ResponsiveMenuIcons = styled.div`
   width: 100%;
-  height: 100%;
-  position: absolute;
+  height: 100vh;
+  position: fixed;
   left: 0;
   top: 0;
   display: flex;
@@ -107,15 +107,13 @@ export const ResponsiveMenuIcons = styled.div`
 `;
 
 export const WrapperResponsiveMenuIcons = styled.div`
-  background-color: rgba(20, 20, 20, 0.5);
-  backdrop-filter: blur(4px);
+  background-color: ${color.secundaryColor};
   width: 100%;
-  height: 200px;
-  position: absolute;
+  height: 100vh;
+  position: fixed;
   top: 60px;
   padding: 2rem;
   left: 0;
-  z-index: 99;
   flex-direction: column;
   row-gap: 4rem;
   overflow-y: auto;
@@ -130,7 +128,7 @@ export const CloseMenu = styled.div`
   top: 0;
   width: 100%;
   height: 60px;
-  z-index: 99;
+  z-index: 1;
   background-color: ${color.primaryColor};
   display: flex;
   align-items: center;
@@ -144,4 +142,18 @@ export const CloseMenu = styled.div`
   @media (max-width: 1000px) {
     display: flex;
   }
+`;
+
+export const DevSection = styled.div`
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  background-color: ${color.darkGreen};
+  color: ${color.white};
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 `;

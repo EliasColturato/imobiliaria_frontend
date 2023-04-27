@@ -132,6 +132,8 @@ export const TextInput = styled.div``;
 
 export const SearchFilters = styled.div`
   align-items: initial;
+  display: flex;
+  column-gap: 1rem;
   select {
     color: ${color.primaryColor};
     font-weight: bold;

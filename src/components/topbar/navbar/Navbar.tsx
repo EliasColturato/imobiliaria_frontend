@@ -9,6 +9,7 @@ import {
   ResponsiveMenu,
   ResponsiveMenuIcons,
   WrapperResponsiveMenuIcons,
+  DevSection,
 } from './style.Navbar';
 import MenuItens from './menuItens';
 
@@ -54,6 +55,7 @@ export default function Navbar() {
             <MenuItens text="Anunciar" img_url={anunciaImg} />
             <MenuItens text="Suporte" img_url={suporteImg} />
           </WrapperResponsiveMenuIcons>
+          <DevSection>Desenvolvido por Elias Colturato</DevSection>
         </ResponsiveMenuIcons>
       )}
     </WrapperNavbar>

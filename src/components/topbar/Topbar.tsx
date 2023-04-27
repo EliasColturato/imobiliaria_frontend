@@ -20,11 +20,25 @@ interface CityProps {
   uf: string;
 }
 
+interface AnuncioProps {
+  id: number;
+  anuncio: string;
+}
+
 export default function Topbar() {
   const [cidades, setCidades] = useState<CityProps[]>([]);
+  const [anuncio, setAnuncio] = useState<AnuncioProps[]>([]);
+
+  const url = 'http://localhost:8000/api/';
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/cidades`)
+    fetch(`${url}anuncios`)
+      .then(response => response.json())
+      .then(data => setAnuncio(data));
+  });
+
+  useEffect(() => {
+    fetch(`${url}cidades`)
       .then(response => response.json())
       .then(data => setCidades(data));
   }, [cidades]);
@@ -53,7 +67,17 @@ export default function Topbar() {
                 />
               </TextInput>
               <SearchFilters>
-                <select name="cidades" id="">
+                <select name="anuncio">
+                  <option value="0">Pretensão</option>
+                  {anuncio.map(item => {
+                    return (
+                      <option key={item.id} value={item.id}>
+                        {item.anuncio}
+                      </option>
+                    );
+                  })}
+                </select>
+                <select name="cidades">
                   <option value="0">Selecione uma cidade</option>
                   {cidades.map(item => {
                     return (
